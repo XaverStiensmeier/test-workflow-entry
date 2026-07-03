@@ -108,6 +108,11 @@ process visualizetree {
   """
 }
 
+
+workflow {
+   clustalomega(params.inputfile) | iqtree
+   visualizetree(clustalomega.out,iqtree.out)
+
 // Completion mail handler
 workflow.onComplete {
 
@@ -139,12 +144,4 @@ workflow.onComplete {
           // no Email adress set (params.email == empty or null)
         }
 }
-
-
-
-
-
-workflow {
-   clustalomega(params.inputfile) | iqtree
-   visualizetree(clustalomega.out,iqtree.out)
 }
