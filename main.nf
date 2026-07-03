@@ -114,7 +114,7 @@ workflow {
    visualizetree(clustalomega.out,iqtree.out)
 
 // Completion mail handler
-workflow.onComplete {
+workflow.onComplete = {
 
     def msg = """\
         Workflow execution summary
