@@ -3,7 +3,7 @@
 // (2) Reconstruction of evolutionary tree with iqtree
 // (3) Tree visualization using R/ggtree
 
-include { CLUSTALOMEGA } from './modules/clustalomega'
+include { CLUSTALOMEGA } from './modules/clustalo'
 include { IQTREE } from './modules/iqtree'
 include { VISUALIZETREE } from './modules/visualizetree'
 
