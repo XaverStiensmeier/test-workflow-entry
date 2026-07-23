@@ -1,5 +1,5 @@
 // Visualize tree in Newick format with R ggtree package
-process visualizetree {
+process VISUALIZETREE {
   label 'small'
 //  container "quay.io/biocontainers/bioconductor-ggtree:3.8.0--r43hdfd78af_0"
   container "xushuangbin/ggtreeextraarticleenv:latest"
