@@ -1,5 +1,5 @@
 // Process for multiple sequence alignment generation using clustalomega.
-process clustalomega{
+process CLUSTALOMEGA{
    label 'highmem_large'
    container "biocontainers/clustal-omega:v1.2.1_cv5"
 //   publishDir params.outdir, mode: 'copy'
