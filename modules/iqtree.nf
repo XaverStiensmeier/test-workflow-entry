@@ -1,5 +1,5 @@
 // Phylogenetic analysis and reconstruction of evolutionary tree
-process iqtree {
+process IQTREE {
   label 'highmem_medium'
   container "staphb/iqtree:latest"
 //  publishDir params.outdir, mode: 'copy'
