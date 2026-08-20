@@ -1,85 +1,12 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/clowmdils/clowm-workshop/main/nextflow_schema.json",
-    "title": "Nextflow pipeline parameters",
-    "description": "This pipeline uses Nextflow and processes some kind of data. The JSON Schema was built using the nf-core pipeline schema builder.",
-    "type": "object",
-    "definitions": {
-        "input_output_parameters": {
-            "title": "Input/ Output Parameters",
-            "type": "object",
-            "description": "Parameters to define the input and output",
-            "default": "",
-            "properties": {
-                "inputfile": {
-                    "type": "string",
-                    "format": "file-path",
-                    "description": "Path to a fasta file with multiple amino sequences",
-                    "fa_icon": "fas fa-file",
-                    "help_text": "S3 path or URL to a single fasta file containing multiple amino acid sequences"
-                },
-                "outdir": {
-                    "type": "string",
-                    "format": "directory-path",
-                    "description": "Path to an output directory where the results are written",
-                    "fa_icon": "fas fa-folder-open",
-                    "help_text": "This should be a path to an S3 bucket/folder where the results of the workflow execution are written"
-                },
-		"email": {
-                    "type": "string",
-		    "default": "",
-                    "description": "Set this parameter to your e-mail address to get a summary e-mail with details of the run sent to you when the workflow exits.",
-                    "fa_icon": "fas fa-envelope",
-                    "help_text": "Enter your Email address to receive notification/status e-mail on workflow completion"
-                }
-            },
-            "required": [
-                "inputfile",
-                "outdir"
-            ]
-        },
-        "visualization": {
-            "title": "Visualization",
-            "type": "object",
-            "description": "Parameter to adjust the visualization of the MSA",
-	    "fa_icon": "fas fa-chart-line",
-            "default": "",
-            "properties": {
-                "title": {
-                    "type": "string",
-                    "description": "The title of the generated plot",
-		    "fa_icon": "fas fa-heading"
-                },
-                "subtitle": {
-                    "type": "string",
-                    "description": "The subtitle of the generated plot",
-		    "fa_icon": "fas fa-align-justify"
-                },
-                "msa_view_start": {
-                    "type": "integer",
-                    "minimum": 1,
-                    "default": 80,
-                    "fa_icon": "fas fa-step-backward",
-                    "description": "Start of the displayed part of the MSA",
-                    "help_text": "This parameter sets the start coordinate of the displayed part of the multiple sequence alignment"
-                },
-                "msa_view_end": {
-                    "type": "integer",
-                    "minimum": 2,
-                    "default": 160,
-                    "fa_icon": "fas fa-step-forward",
-                    "description": "End of the displayed part of the MSA",
-                    "help_text": "This parameter sets the end coordinate of the displayed part of the multiple sequence alignment"
-                }
-            }
-        }
-    },
-    "allOf": [
-        {
-            "$ref": "#/definitions/input_output_parameters"
-        },
-        {
-            "$ref": "#/definitions/visualization"
-        }
-    ]
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "My Nextflow Pipeline",
+  "type": "object",
+  "properties": {
+    "comment": {
+      "type": "string",
+      "description": "Optional comment."
+    }
+  },
+  "additionalProperties": false
 }
