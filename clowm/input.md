@@ -1,2 +1,1 @@
-The MegaTree workflow requires a FASTA-formatted file containing multiple amino acid sequences as input. Provide the path to this file — or its S3 URI — using the `--inputfile` parameter.
-You can customize your visualizations by adding a title and subtitle using the `--title` and `--subtitle` parameters. Additionally, use `--msa_view_start` and `--msa_view_end` to specify the start and end coordinates for the multiple sequence alignment (MSA) view."
+Test input
